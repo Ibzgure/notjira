@@ -1,4 +1,31 @@
+# The Challenge
+
+☑️ **Develop a task management system as a software engineer.**
+
 ---
+
+## Requirements
+
+- Add, edit, or delete users as an administrator.
+- Assign tasks to users and set deadlines for each task.
+- Include task statuses: **Pending**, **In Progress**, or **Completed**.
+- Allow users to view tasks assigned to them and update task statuses.
+- Send email notifications to users when new tasks are assigned.
+
+---
+
+## Instructions
+
+- Use PHP or a PHP framework (e.g., Laravel), but avoid CMS or JavaScript frameworks like Vue.js.
+- Notify us if you plan to use any other framework (optional).
+- Provide an SQL dump file and specify the database used if applicable.
+- Demonstrate OOP skills (optional but recommended).
+- Use JavaScript (Vanilla JS or Vue.js) to enhance the interface (recommended).
+- Host the application and share the URL (recommended).
+- Complete the challenge within **4 days**, submitting by **midday Tuesday, July 15th, 2025**.
+
+---
+
 
 ## Setup Instructions
 
@@ -14,66 +41,48 @@ Ensure the following are installed on your system:
 
 ---
 
-### Steps to Set Up the Application
-
-#### 1. Clone the Repository
+## 1. Clone the Repository
 
 ```bash
 git clone <repository-url>
 cd <repository-folder>
-2. Install PHP Dependencies
-bash
-Copy
-Edit
+
+---
+
+## 2.Install PHP Dependencies
+
+```bash
 composer install
-3. Install Node.js Dependencies
-bash
-Copy
-Edit
+## 3.Install Node.js Dependencies
+
+```bash
 npm install
-4. Set Up the SQLite Database
-Create a new SQLite database file:
-
-bash
-Copy
-Edit
+## 4.Set Up the SQLite Database
+○Create a new SQLite database file:
+```bash
 touch database/database.sqlite
-Update the .env file with the correct database configuration:
-
-ini
-Copy
-Edit
+○Update your .env file to include:
 DB_CONNECTION=sqlite
 DB_DATABASE=/absolute/path/to/database/database.sqlite
-Run migrations to set up the database schema:
 
-bash
-Copy
-Edit
+○Run migrations to set up the database schema:
+```bash
 php artisan migrate
-5. Start the Development Server
-Run the Laravel server:
+## 5.Start the Development Server
+○Run the Laravel server:
 
-bash
-Copy
-Edit
+```bash
 php artisan serve
-Optionally, compile assets using the Node development server:
+○Optionally, start the Node.js development server for assets:
 
-bash
-Copy
-Edit
+```bash
 npm run dev
-Access the Application
-Once the servers are running, open your browser and visit:
+## 6.Access the Application
+○Open your browser and navigate to http://127.0.0.1:8000.
 
-cpp
-Copy
-Edit
-http://127.0.0.1:8000
-Notes
-Ensure proper write permissions for the database/database.sqlite file.
+##Notes
+-Ensure proper write permissions for database/database.sqlite.
 
-If deploying the application, update your .env file with production environment settings.
+-For production hosting, configure .env for your production database and URL.
 
-For email notifications, configure valid SMTP credentials in the .env file (e.g., using Mailtrap, Gmail SMTP, etc.).
+-To enable email notifications, update .env with SMTP credentials:

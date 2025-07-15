@@ -49,40 +49,37 @@ cd <repository-folder>
 
 ---
 
-## 2.Install PHP Dependencies
+2. Install PHP Dependencies
 
-```bash
 composer install
-## 3.Install Node.js Dependencies
+3.Install Node.js Dependencies
 
-```bash
 npm install
-## 4.Set Up the SQLite Database
-○Create a new SQLite database file:
-```bash
+4.Set Up the SQLite Database
+○ Create a new SQLite database file:
+
 touch database/database.sqlite
-○Update your .env file to include:
+○ Update your .env file to include:
 DB_CONNECTION=sqlite
 DB_DATABASE=/absolute/path/to/database/database.sqlite
 
-○Run migrations to set up the database schema:
-```bash
+○ Run migrations to set up the database schema:
 php artisan migrate
-## 5.Start the Development Server
-○Run the Laravel server:
+5.Start the Development Server
+○ Run the Laravel server:
 
-```bash
+
 php artisan serve
-○Optionally, start the Node.js development server for assets:
+○ Optionally, start the Node.js development server for assets:
 
-```bash
+
 npm run dev
-## 6.Access the Application
-○Open your browser and navigate to http://127.0.0.1:8000.
+6.Access the Application
+○ Open your browser and navigate to http://127.0.0.1:8000.
 
-##Notes
--Ensure proper write permissions for database/database.sqlite.
+Notes
+● Ensure proper write permissions for database/database.sqlite.
 
--For production hosting, configure .env for your production database and URL.
+● For production hosting, configure .env for your production database and URL.
 
--To enable email notifications, update .env with SMTP credentials:
+● To enable email notifications, update .env with SMTP credentials:
